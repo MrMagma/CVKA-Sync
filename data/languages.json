@@ -1,0 +1,138 @@
+{
+    "0": {
+        "bld": "en",
+        "name": "English"
+    },
+    "1": {
+        "bld": "es",
+        "name": "Spanish"
+    },
+    "2": {
+        "bld": "pt",
+        "name": "Portugese"
+    },
+    "3": {
+        "bld": "fr",
+        "name": "French"
+    },
+    "4": {
+        "bld": "tr",
+        "name": "Turkish"
+    },
+    "5": {
+        "bld": "nb",
+        "name": "Norwegian Bokmål"
+    },
+    "6": {
+        "bld": "hi",
+        "name": "Hindi"
+    },
+    "7": {
+        "bld": "id",
+        "name": "Indonesian"
+    },
+    "8": {
+        "bld": "ms",
+        "name": "Malay"
+    },
+    "9": {
+        "bld": "cs",
+        "name": "Czech"
+    },
+    "10": {
+        "bld": "da",
+        "name": "Danish"
+    },
+    "11": {
+        "bld": "de",
+        "name": "German"
+    },
+    "12": {
+        "bld": "xh",
+        "name": "Xhosa"
+    },
+    "13": {
+        "bld": "it",
+        "name": "Italian"
+    },
+    "14": {
+        "bld": "nl",
+        "name": "Dutch"
+    },
+    "15": {
+        "bld": "pl",
+        "name": "Polish"
+    },
+    "16": {
+        "bld": "el",
+        "name": "Greek"
+    },
+    "17": {
+        "bld": "bg",
+        "name": "Bulgarian"
+    },
+    "18": {
+        "bld": "mn",
+        "name": "Mongolian"
+    },
+    "19": {
+        "bld": "ru",
+        "name": "Russian"
+    },
+    "20": {
+        "bld": "sr",
+        "name": "Serbian"
+    },
+    "21": {
+        "bld": "uk",
+        "name": "Ukranian"
+    },
+    "22": {
+        "bld": "hy",
+        "name": "Armenian"
+    },
+    "23": {
+        "bld": "he",
+        "name": "Hebrew"
+    },
+    "24": {
+        "bld": "ur",
+        "name": "Urdu"
+    },
+    "25": {
+        "bld": "ar",
+        "name": "Arabic"
+    },
+    "26": {
+        "bld": "fa",
+        "name": "Persian (Farsi)"
+    },
+    "27": {
+        "bld": "bn",
+        "name": "Bengali"
+    },
+    "28": {
+        "bld": "te",
+        "name": "Telugu"
+    },
+    "29": {
+        "bld": "th",
+        "name": "Thai"
+    },
+    "30": {
+        "bld": "zh-hans",
+        "name": "Simplified Chinese"
+    },
+    "31": {
+        "bld": "ja",
+        "name": "Japanese"
+    },
+    "32": {
+        "bld": "ko",
+        "name": "Korean"
+    },
+    "33": {
+        "bld": "ka",
+        "name": "Georgian"
+    }
+}

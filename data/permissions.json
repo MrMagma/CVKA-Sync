@@ -1,0 +1,8 @@
+{
+  "ADMIN" : 5,
+  "DEVELOPER" : 10,
+  "GUEST" : 0,
+  "MAX" : 10,
+  "MIN" : 0,
+  "USER" : 1
+}

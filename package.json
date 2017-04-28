@@ -1,0 +1,24 @@
+{
+  "name": "cvka-sync",
+  "version": "1.0.0",
+  "description": "A collection of scripts to update the CVKA data in Firebase.",
+  "main": "process-topic-tree.js",
+  "scripts": {
+    "test": "echo \"Tests are for n00bs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrmagma/cvka-sync.git"
+  },
+  "author": "Joshua Gammage",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrmagma/cvka-sync/issues"
+  },
+  "homepage": "https://github.com/mrmagma/cvka-sync#readme",
+  "dependencies": {
+    "firebase": "^3.2.1",
+    "firebase-token-generator": "^2.0.0",
+    "request": "^2.74.0"
+  }
+}
