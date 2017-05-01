@@ -16,6 +16,7 @@ def get_data(url):
         with urllib.request.urlopen(request) as response:
             return json.loads(response.readall().decode("utf-8"))
     except:
+        print("Exception encountered while fetching '" + url + "'. Retrying...")
         get_data(url)
 
 def get_vid_slug(internal_id):
