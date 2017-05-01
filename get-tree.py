@@ -10,11 +10,17 @@ API_PATH = "https://www.khanacademy.org"
 TOPIC_SLUG = "/api/v1/topic/"
 VIDEO_SLUG = "/api/v1/videos/"
 
+def get_data(url):
+    try:
+        request = urllib.request.Request(url)
+        with urllib.request.urlopen(request) as response:
+            return json.loads(response.readall().decode("utf-8"))
+    except:
+        get_data(url)
+
 def get_vid_slug(internal_id):
     print("Fetching video:", internal_id)
-    request = urllib.request.Request(API_PATH + VIDEO_SLUG + internal_id)
-    with urllib.request.urlopen(request) as response:
-        video = json.loads(response.readall().decode("utf-8"))
+    video = get_data(API_PATH + VIDEO_SLUG + internal_id)
     
     return video["youtube_id"]
 
@@ -38,9 +44,7 @@ def get_subtopics(topic):
 
 def get_topic(slug):
     print("Fetching topic:", slug)
-    request = urllib.request.Request(API_PATH + TOPIC_SLUG + slug)
-    with urllib.request.urlopen(request) as response:
-        topic = json.loads(response.readall().decode("utf-8"))
+    topic = get_data(API_PATH + TOPIC_SLUG + slug)
     
     return {
         "slug": topic["node_slug"],
@@ -57,4 +61,4 @@ else:
     tree = get_topic("root")
     tree["last_updated"] = time.strftime("%x%X")
     out.write(json.dumps(tree))
-    out.close(
+    out.close()
