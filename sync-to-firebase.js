@@ -1,32 +1,41 @@
 var firebase = require("firebase");
 var secrets = require("./secrets.json");
+var langs = require("./languages.json").languages;
 
-var argv = process.argv,
-    argc = argv.length;
+firebase.initializeApp({
+    serviceAccount: "credentials.json",
+    databaseURL: "https://ka-clarifs-70838.firebaseio.com"
+});
 
-function syncToFirebase(topicTree) {
-    firebase.initializeApp({
-        serviceAccount: "credentials.json",
-        databaseURL: "https://ka-clarifs-70838.firebaseio.com"
-    });
+function addSlugMap(topicTree) {
+    var slugMap = {};
+    
+    for (var i = 0; i < topicTree.children.length; ++i) {
+        slugMap[topicTree.children[i].slug] = i;
+    }
+    
+    topicTree.slug_map = slugMap;
+}
+
+function syncToFirebase(lang, topicTree) {
+    addSlugMap(topicTree);
     var token = firebase.auth().createCustomToken("cvka-topic-tree-sync-bot");
     var db = firebase.database();
-    var ref = db.ref("content_tree");
+    var ref = db.ref("content_trees/" + lang);
     ref.set(topicTree)
         .then(function() {
-            console.log("Synced.");
+            console.log("Synced " + lang);
             process.exit(0);
         })
         .catch(function(error) {
-            console.log("Sync failed.");
+            console.log(lang + " sync failed");
             console.error(error);
             process.exit(1);
         });
 }
 
-if (argc < 3) {
-    console.log("Please provide a file to sync");
-} else {
-    console.log("Syncing...");
-    syncToFirebase(require("./" + argv[2]));
+
+for (var i = 0; i < langs.length; ++i) {
+    console.log("Syncing " + langs[i] + " tree...");
+    syncToFirebase(langs[i], require("./output/" + langs[i] + "-tree.json"));
 }

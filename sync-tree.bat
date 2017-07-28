@@ -1,2 +1,2 @@
-python get-tree.py output/%1
-node sync-to-firebase.js output/%1
+node fetch-langs.js
+node sync-to-firebase.js

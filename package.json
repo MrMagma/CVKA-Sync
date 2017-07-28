@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mrmagma/cvka-sync#readme",
   "dependencies": {
+    "colors": "^1.1.2",
     "firebase": "^3.2.1",
     "firebase-token-generator": "^2.0.0",
     "request": "^2.74.0"
