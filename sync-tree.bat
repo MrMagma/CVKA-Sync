@@ -1,2 +1,2 @@
-node fetch-langs.js
+node save-trees.js
 node sync-to-firebase.js

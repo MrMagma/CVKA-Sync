@@ -1,5 +1,5 @@
 var firebase = require("firebase");
-var secrets = require("./secrets.json");
+// var secrets = require("./secrets.json");
 var langs = require("./languages.json").languages;
 var getColors = require("./get-colors.js");
 

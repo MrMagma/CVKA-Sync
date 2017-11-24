@@ -1,6 +1,6 @@
 var request = require("request");
 
-var url = "https://cdn.kastatic.org/genfiles/javascript/en/shared-styles-package-857abe.js";
+var url = "https://cdn.kastatic.org/genfiles/javascript/en/shared-styles-package-0c8bb6.js";
 
 module.exports = function getColors(cb) {
     request(url, function(error, response, body) {
