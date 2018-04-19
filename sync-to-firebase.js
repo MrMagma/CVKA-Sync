@@ -32,12 +32,10 @@ function syncToFirebase(lang, topicTree) {
     ref.set(topicTree)
         .then(function() {
             console.log("Synced " + lang);
-            process.exit(0);
         })
         .catch(function(error) {
             console.log(lang + " sync failed");
             console.error(error);
-            process.exit(1);
         });
 }
 
