@@ -2,3 +2,4 @@ secrets.json
 node_modules
 credentials.json
 output
+package-lock.json
