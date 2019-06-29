@@ -23,7 +23,13 @@ function trim_tree(tree) {
 }
 
 module.exports = function(lang, cb) {
+    console.log(`Fetching ${lang} tree`);
     request("https://" + lang + ".khanacademy.org/api/v1/topictree", function(error, response, body) {
-        cb(trim_tree(JSON.parse(body)));
+        console.log(`Got ${lang} tree`);
+        try {
+            cb(trim_tree(JSON.parse(body)));
+        } catch {
+            console.log(`An error was encountered while saving the ${lang} tree`);
+        }
     });
 }
